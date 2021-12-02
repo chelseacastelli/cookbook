@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>{{ template_recipe | title }}</h1>
+    <!-- Insert description if statement here -->
+    {% if template_description %}
+      <p>{{ template_description }}</p>
+
+    <!-- Include else here -->
+    {% else %}
+      <p>A {{ template_recipe }} recipe.</p>
+    
+    <!-- Be sure to close with an endif block -->
+    {% endif %}
+
+    <h3>Ingredients - {{ template_ingredients | length}}</h3>
+    <ul>
+      
+      {% for ingredient in template_ingredients %}
+        <li>{{ ingredient }}</li>
+      {% endfor %}
+    </ul>
+
+    <h3>Instructions</h3>
+    {% for key, instruction in template_instructions | dictsort %}
+      <p><strong>{{ key }}:</strong> {{ instruction }}</p>
+    {% endfor %}
+
+{% endblock %}
