@@ -26,5 +26,20 @@
     {% for key, instruction in template_instructions | dictsort %}
       <p><strong>{{ key }}:</strong> {{ instruction }}</p>
     {% endfor %}
+    <br>
+    <h3>Comments</h3>
+    <ul>
+    {% for comment in template_comments %}
+      <li>{{ comment }}</li>
+    {% endfor %}
+    </ul>
+
+    <form method="POST">
+      {{ template_form.hidden_tag() }}
+      {{ template_form.comment.label }}
+      {{ template_form.comment() }}
+    <br><br>
+      {{ template_form.submit() }}
+    </form>
 
 {% endblock %}
