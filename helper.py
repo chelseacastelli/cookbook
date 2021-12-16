@@ -1,5 +1,6 @@
 
 recipes = {1: "fried egg", 2: "buttered toast"}
+types = {1: "Breakfast", 2: "Breakfast"}
 descriptions = {1: 'Egg fried in butter', 2: 'Toasted bread spread with butter'}
 ingredients = {1: ['1 pad of butter', '1 Egg', 'A pinch of salt'], 2: ['1 pad of salted butter', '1 slice of bread']}
 instructions = {1: {'Step 2': 'Crack the egg into the buttered pan', 'Step 5': 'Serve egg after about a minute and a half', 'Step 1': 'Melt butter in pan over medium-low heat', 'Step 4': 'Flip egg after about a minute and a half', 'Step 3': 'Sprinkle the pinch of salt onto cooking egg',},
